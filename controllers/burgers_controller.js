@@ -10,7 +10,11 @@ router.get("/", function(req,res){
         };
         console.log(hbsObj);
         res.render("index", hbsObj);
-    })
+    });
+});
+
+router.post("/api/burgers", function(req,res){
+    burger.create()
 })
 
 module.exports = router;

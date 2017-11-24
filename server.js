@@ -5,9 +5,10 @@ const port = process.env.port || 3005;
 
 const app = express();
 
-// app.use(express.static("public"));
 // middleware
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
+
 // handlebars
 const exphbs = require("express-handlebars");
 
