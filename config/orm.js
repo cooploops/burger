@@ -14,8 +14,8 @@ exports.insertOne = function(burgerName, cb){
     })
 }
 
-exports.updateOne = function(id, change, cb){
-    connection.query("UPDATE burgers SET devoured = "+change+" WHERE id = "+id+";", function(err, result){
+exports.updateOne = function(change, id, cb){
+    connection.query("UPDATE burgers SET devoured = ? WHERE id = ?", [change, parseInt(id)], function(err, result){
         if (err) throw err;
         cb(result);
     })

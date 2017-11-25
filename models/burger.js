@@ -12,8 +12,8 @@ exports.create = function(burgerName, cb){
     });
 }
 
-exports.update = function(id, change, cb){
-    orm.updateOne(id, change, function(res){
+exports.update = function(change, id, cb){
+    orm.updateOne(change, id, function(res){
         cb(res);
     });
 }
