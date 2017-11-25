@@ -14,7 +14,12 @@ router.get("/", function(req,res){
 });
 
 router.post("/api/burgers", function(req,res){
-    burger.create()
+
+    let newBurger = req.body.burger;
+    
+    burger.create(newBurger, function(result){
+        res.json(true);
+    })
 })
 
 module.exports = router;

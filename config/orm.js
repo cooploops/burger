@@ -8,7 +8,7 @@ exports.selectAll = function(cb){
 }
 
 exports.insertOne = function(burgerName, cb){
-    connection.query("INSERT INTO burgers (burger_name, devoured) VALUES ("+burgerName+",false)",function(err,result){
+    connection.query("INSERT INTO burgers SET ?",{burger_name: burgerName, devoured: false}, function(err,result){
         if(err) throw err;
         cb(result);
     })
