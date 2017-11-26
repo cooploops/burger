@@ -1,0 +1,39 @@
+body{
+    background: rgb(0,50,101);
+}
+
+h1 {
+    color:rgb(255,177,210);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.toBeEaten {
+    background-color: rgba(240, 231, 231, 0.637);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.eaten {
+    background-color: rgba(230, 120, 120, 0.637);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.kirbyTitle{
+    width:150px;
+    height: 150px;
+}
+
+.title {
+    text-shadow: 4px 4px 1px #000, -1px -1px 0 #000;
+}
+
+.burgerForm{
+    background-color: gray;
+    border-radius: 5px;
+    width:50%;
+}
+
+.burgerForm h2 {
+    text-shadow: 2px 2px 3px #000;
+}

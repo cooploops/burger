@@ -1,7 +1,12 @@
-<li>
+<li class="mx-auto my-1">
 	{{burger_name}}
-
-	<button class="change-devour" data-id="{{id}}" data-eaten="{{devoured}}">
-		{{#if devoured}}Regurgitate!{{else}}Devour!{{/if}}
+	{{#if devoured}}
+	<button class="change-devour btn btn-primary btn-sm" data-id="{{id}}" data-eaten="{{devoured}}">
+		Regurgitate!
 	</button>
+	{{else}}
+	<button class="change-devour btn btn-success btn-sm" data-id="{{id}}" data-eaten="{{devoured}}">
+		Inhale!
+	</button>
+	{{/if}}
 </li>
